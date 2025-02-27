@@ -3,9 +3,11 @@ main = "_worker.js"
 compatibility_date = "2023-05-26"
 # node_compat = true
 workers_dev = true
-
+routes = [
+  { pattern = "rx.xueddong.xyz", custom_domain = true }
+]
 [vars]
 # PROXYIP = "211.230.110.231:50008"
-UUID = "1b6c1745-992e-4aac-8685-266c090e50ea"
+UUID = "5df51c3c-bf45-4db8-aa8f-bb241f6fc168", "a7cd7ef4-26a1-4b1b-a1fa-854a14b24d67"
 # SOCKS5 = "127.0.0.1:1080"
 # SOCKS5_RELAY = "true"
