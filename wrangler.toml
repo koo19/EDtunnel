@@ -8,6 +8,6 @@ routes = [
 ]
 [vars]
 # PROXYIP = "211.230.110.231:50008"
-UUID = "5df51c3c-bf45-4db8-aa8f-bb241f6fc168", "a7cd7ef4-26a1-4b1b-a1fa-854a14b24d67"
+UUID = "5df51c3c-bf45-4db8-aa8f-bb241f6fc168,a7cd7ef4-26a1-4b1b-a1fa-854a14b24d67"
 # SOCKS5 = "127.0.0.1:1080"
 # SOCKS5_RELAY = "true"
