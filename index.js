@@ -456,9 +456,9 @@ async function ProtocolOverWSHandler(request) {
 				if (portRemote === 53) {
 					isDns = true;
 				} else {
-					throw new Error('UDP proxy is only enabled for DNS (port 53)');
+					// throw new Error('UDP proxy is only enabled for DNS (port 53)');
 				}
-				return; // Early return after setting isDns or throwing error
+				// return; // Early return after setting isDns or throwing error
 			}
 			// ["version", "附加信息长度 N"]
 			const ProtocolResponseHeader = new Uint8Array([ProtocolVersion[0], 0]);
