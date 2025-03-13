@@ -11,4 +11,4 @@ workers_dev = true
 # SOCKS5_RELAY = "true"
 
 [observability.logs]
-enabled = true
+enabled = false
