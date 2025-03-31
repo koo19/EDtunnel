@@ -1261,7 +1261,7 @@ function getConfig(userIDs, hostName, proxyIP) {
       const userIDArray = ${JSON.stringify(userIDArray)};
       const pt = "${pt}";
       const at = "${at}";
-      const commonUrlPart = "?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}";
+      const commonUrlPart = "?encryption=none&security=tls&sni=${hostName}&alpn=h3%2Ch2&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}";
 
       function copyToClipboard(text) {
         navigator.clipboard.writeText(text)
