@@ -1339,7 +1339,7 @@ function GenSub(userID_path, hostname, proxyIP) {
 	const proxyIPArray = Array.isArray(proxyIP) ? proxyIP : (proxyIP ? (proxyIP.includes(',') ? proxyIP.split(',') : [proxyIP]) : proxyIPs);
 	const randomPath = () => '/' + Math.random().toString(36).substring(2, 15) + '?ed=2048';
 	const commonUrlPartHttp = `?encryption=none&security=none&fp=random&type=ws&host=${hostname}&path=${encodeURIComponent(randomPath())}#`;
-	const commonUrlPartHttps = `?encryption=none&security=tls&sni=${hostname}&fp=random&type=ws&host=${hostname}&path=%2F%3Fed%3D2048#`;
+	const commonUrlPartHttps = `?encryption=none&security=tls&sni=${hostname}&fp=random&type=ws&host=${hostname}&path=%2F%3Fed%3D2048#&alpn=h2,h3`;
 
 	const result = userIDArray.flatMap((userID) => {
 		let allUrls = [];
