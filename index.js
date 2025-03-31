@@ -1050,7 +1050,7 @@ const ed = 'RUR0dW5uZWw=';
  * @returns {string} Configuration HTML
  */
 function getConfig(userIDs, hostName, proxyIP) {
-	const commonUrlPart = `?encryption=none&security=tls&sni=${hostName}&alpn=h3%2Ch2&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const commonUrlPart = `?encryption=none&security=tls&sni=${hostName}&alpn=h3%2Ch2&h2=1&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
 
 	// Split the userIDs into an array
 	const userIDArray = userIDs.split(",");
@@ -1261,7 +1261,7 @@ function getConfig(userIDs, hostName, proxyIP) {
       const userIDArray = ${JSON.stringify(userIDArray)};
       const pt = "${pt}";
       const at = "${at}";
-      const commonUrlPart = "?encryption=none&security=tls&sni=${hostName}&alpn=h3%2Ch2&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}";
+      const commonUrlPart = "?encryption=none&security=tls&sni=${hostName}&alpn=h3%2Ch2&h2=1&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}";
 
       function copyToClipboard(text) {
         navigator.clipboard.writeText(text)
@@ -1339,7 +1339,7 @@ function GenSub(userID_path, hostname, proxyIP) {
 	const proxyIPArray = Array.isArray(proxyIP) ? proxyIP : (proxyIP ? (proxyIP.includes(',') ? proxyIP.split(',') : [proxyIP]) : proxyIPs);
 	const randomPath = () => '/' + Math.random().toString(36).substring(2, 15) + '?ed=2048';
 	const commonUrlPartHttp = `?encryption=none&security=none&fp=random&type=ws&host=${hostname}&path=${encodeURIComponent(randomPath())}#`;
-	const commonUrlPartHttps = `?encryption=none&security=tls&sni=${hostname}&alpn=h3%2Ch2&fp=random&type=ws&host=${hostname}&path=%2F%3Fed%3D2048#`;
+	const commonUrlPartHttps = `?encryption=none&security=tls&sni=${hostname}&alpn=h3%2Ch2&h2=1&fp=random&type=ws&host=${hostname}&path=%2F%3Fed%3D2048#`;
 
 	const result = userIDArray.flatMap((userID) => {
 		let allUrls = [];
